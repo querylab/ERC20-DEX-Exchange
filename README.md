@@ -15,7 +15,7 @@ $ npm install --save-dev hardhat
 $ npx hardhat
 $ npm install --save dotenv @nomiclabs/hardhat-etherscan @openzeppelin/contracts @nomicfoundation/hardhat-toolbox
 ```
-## 3. Change variables in hardhat.config.js, deploy.js and blockchain_stuff.js files to their metamask and alchemy keys 
+## 3. Change variables in hardhat.config.js, deploy.js and blockchain_stuff.js
 
 ```bash
 # hardhat.config.js
