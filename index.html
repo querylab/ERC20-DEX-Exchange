@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <input id="connect_button" type="button" value="Connect" onclick="connectWallet()" style="display: none"></input>
+  <p id="account_address" style="display: none"></p>
+  <p id="web3_message"></p>
+  <p id="contract_state"></p>
+  <h1>Liquidity</h1>
+
+  <p>Approve TokenA</p>
+  <input type="input"  value="" id="approveTokenAAmountLiquidity"></input><br>
+  <input type="button" value="approve" onclick="_approveTokenALiquidity()"></input><br><br>
+
+  <p>Approve TokenB</p>
+  <input type="input"  value="" id="approveTokenBAmountLiquidity"></input><br>
+  <input type="button" value="approve" onclick="_approveTokenBLiquidity()"></input><br><br>
+
+  <p>Add liquidity (ERC20)</p>
+  <input type="input"  value="" id="amountADesired"></input><br>
+  <input type="input"  value="" id="amountBDesired"></input><br>
+  <input type="button" value="Add liquidity" onclick="_addLiquidity()"></input><br><br>
+
+  <h1>Swap</h1>
+
+  <h2>From TokenA</h2>
+
+  <p id="tokenAPrice"></p>
+
+  <p>Approve TokenA</p>
+  <input type="input"  value="" id="approveTokenASwapsAmount"></input><br>
+  <input type="button" value="approve" onclick="_approveTokenASwaps()"></input><br><br>
+
+  <p>To TokenB</p>
+  <input type="input"  value="" id="amountInTokenAForTokenB"></input><br>
+  <input type="button" value="swap" onclick="_swapExactTokensForTokensTokenAForTokenB()"></input><br><br>
+
+  <h2>From TokenB</h2>
+
+  <p id="tokenBPrice"></p>
+
+  <p>Approve TokenB</p>
+  <input type="input"  value="" id="approveTokenBSwapsAmount"></input><br>
+  <input type="button" value="approve" onclick="_approveTokenBSwaps()"></input><br><br>
+
+  <p>To TokenA</p>
+  <input type="input"  value="" id="amountInTokenBForTokenA"></input><br>
+  <input type="button" value="swap" onclick="_swapExactTokensForTokensTokenBForTokenA()"></input><br><br>
+
+  <br>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js"></script>
+  <script type="text/javascript" src="blockchain_stuff.js"></script>
+</body>
+</html>
+
+<script>
+  function _approveTokenALiquidity()
+  {
+    approveTokenAAmountLiquidity = document.getElementById("approveTokenAAmountLiquidity").value
+    approveTokenALiquidity(approveTokenAAmountLiquidity)
+  }
+
+  function _approveTokenBLiquidity()
+  {
+    approveTokenBAmountLiquidity = document.getElementById("approveTokenBAmountLiquidity").value
+    approveTokenBLiquidity(approveTokenBAmountLiquidity)
+  }
+
+  function _addLiquidity()
+  {
+    amountADesired = document.getElementById("amountADesired").value
+    amountBDesired = document.getElementById("amountBDesired").value
+    addLiquidity(amountADesired, amountBDesired)
+  }
+
+  function _approveTokenASwaps()
+  {
+    approveTokenAAmount = document.getElementById("approveTokenASwapsAmount").value
+    approveTokenASwaps(approveTokenAAmount)
+  }
+
+  function _approveTokenBSwaps()
+  {
+    approveTokenBAmount = document.getElementById("approveTokenBSwapsAmount").value
+    approveTokenBSwaps(approveTokenBAmount)
+  }
+
+  function _swapExactTokensForTokensTokenAForTokenB()
+  {
+    amountIn = document.getElementById("amountInTokenAForTokenB").value
+    swapExactTokensForTokensTokenAForTokenB(amountIn)
+  }
+
+  function _swapExactTokensForTokensTokenBForTokenA()
+  {
+    amountIn = document.getElementById("amountInTokenBForTokenA").value
+    swapExactTokensForTokensTokenBForTokenA(amountIn)
+  }
+</script>
