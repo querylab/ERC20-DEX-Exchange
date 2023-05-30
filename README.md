@@ -41,7 +41,7 @@ $ npx hardhat compile
 ```
 
 ``` bash
-$ npx hardhat run scripts/deploynft.js --network sepolia
+$ npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 <a href="https://imgur.com/3uQFfbn"><img src="https://i.imgur.com/3uQFfbn.gif" title="source: imgur.com" /></a>
