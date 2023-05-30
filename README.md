@@ -1,4 +1,4 @@
-# ERC20 (DEX) 🏛️ 🪙 
+# ERC20 (DEX) 🏛️ 💰
 
 This is a complete Decentralized Marketplace (DEX) for a Sepolia Test Network  with scripts and deploys made with Solidity using Hardhat.
 
