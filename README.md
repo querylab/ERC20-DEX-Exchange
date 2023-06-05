@@ -12,7 +12,6 @@ This is a complete Decentralized Marketplace (DEX) for a Sepolia Test Network  w
 ```bash
 $ cd ERC20-DEX-Exchange
 $ npm install --save-dev hardhat
-$ npx hardhat
 $ npm install --save dotenv @nomiclabs/hardhat-etherscan @openzeppelin/contracts @nomicfoundation/hardhat-toolbox
 ```
 ## 3. Change variables in hardhat.config.js, deploy.js and blockchain_stuff.js
